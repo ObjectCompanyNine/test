@@ -125,14 +125,34 @@ img {
 }
 
 #wrappers #articles article {
-	float: left;
-	width: 31.3%;
 	border: 1px solid silver;
-	box-sizing: border-box;
 	border-radius: 5px;
+	box-sizing: border-box;
 	background: #fafafa;
-	margin-right: 2%;
 	min-height: 400px;
+	float: left;
+}
+
+@media (min-width:900px) { 
+#wrappers #articles article {
+	width: 31.3%;
+	margin-right: 2%;
+}
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+#wrappers #articles article {
+	width: 80%;
+	margin-left: 10%;
+} 
+}
+
+@media (max-width:699px) { 
+#wrappers #articles article {
+	width: 96%;
+	margin-right: 2%;
+	margin-top: 10px;
+}
 }
 
 #wrappers #articles article img {
@@ -195,6 +215,121 @@ img {
 	width: 500px;
 	height: 90px;
 	background-color: silver;
+	max-width: 98%;
+	box-sizing: border-box;
+}
+
+/*Стили для странички о нас*/
+
+#about_us {
+	width: 60%;
+	float: left;
+	background-color: #fafafa;
+	border: 2px solid silver;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 1%;
+	font-family: Comic Sans MS, sans-serif;
+	font-style: italic;
+	text-align: center;
+}
+
+#columRight {
+	width: 30%;
+	float: right;
+	margin-left: 5%;
+	background-color: #fafafa;
+	border: 2px solid silver;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 1%;
+	font-family: Comic Sans MS, sans-serif;
+	font-style: italic;
+	text-align: center;
+}
+
+/*Формы обратной связи*/
+
+form {
+	width: 60%;
+	margin-left: 20%;
+	float: left;
+}
+
+form input {
+	border: 2px solid silver;
+	border-radius: 5px;
+	padding: 5px;
+	float: left;
+	clear: both;
+	margin-bottom: 10px;
+	width: 40%;
+}
+
+form input:focus {
+	border: 2px solid orange;
+}
+
+form label {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+form textarea {
+	width: 60%;
+	float: left;
+	clear: both;
+	border: 2px solid silver;
+	border-radius: 2px;
+	font-size: 1.2em;
+}
+
+form #send {
+	float: left;
+	padding: 10px;
+	background-color: #cecece;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+form #send:hover {
+	background-color: silver;
+}
+
+/*Страничка статьи*/
+
+#wrappers #articles #article_in {
+	width: 100%;
+	height: 700px;
+	border: 2px solid silver;
+	border-radius: 5px;
+	float: left;
+
+}
+
+#wrappers #articles #article_in img {
+	width: 60%;
+	margin-left: 20%;
+	height: 400px;
+	float: left;
+}
+
+#wrappers #articles #article_in h2 {
+	width: 90%;
+	margin-left: 5%;
+	float: left;
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 1.9em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#wrappers #articles #article_in p {
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 1.4em;
+	float: left;
+
 }
 
 /*Подвал сайта*/
