@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+html {
+	height: 100%;
+}
+
+header, footer {
+	width: 98%;
+	background-color: #ffffff;
+	font-family: Comic Sans MS, sans-serif ;
+	padding: 1%;
+	float: left;
+}
+
+/*Шапка сайта*/
+
+header {
+	border-bottom: 2px solid silver;
+}
+
+#logo {
+	font-size: 2em;
+	color: silver
+}
+
+.contact {
+	font-size: 1.5em;
+	margin-left: 20px;
+}
+
+input[type=text].field {
+	border: 2px solid silver;
+	border-radius: 5px;
+	padding: 5px;
+	margin-left: 20px;
+}
+
+input[type=text].field:focus {
+	border: 2px solid orange;
+}
+
+.right {
+	float: right;
+	width: 20%;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+/*Тело сайта*/
+
+body {
+	width: 100%;
+	height: 100%;
+	color: black;
+	background: #f7f7f7;
+	font-size: 1.1em;
+	font-family: "Segoe UI", sans-serif;
+	line-height: 120%; 
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 1px;
+	border-top: 1px solid #cccccc;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+/*Меню*/
+
+#menu {
+	color: #666666;
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 1.7em;
+}
+
+#menu hr {
+	width: 500px;
+	max-width: 100%;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#menuHrefs a {
+	padding: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+	color: grey;
+}
+
+#menuHrefs a:hover {
+	background-color: pink;
+}
+
+/*Новости*/
+
+#wrappers {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+
+#wrappers #articles {
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+}
+
+#wrappers #articles article {
+	float: left;
+	width: 31.3%;
+	border: 1px solid silver;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background: #fafafa;
+	margin-right: 2%;
+	min-height: 400px;
+}
+
+#wrappers #articles article img {
+	width: 100%;
+	height: 200px;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid silver;
+	margin-bottom: 10px;
+}
+
+#wrappers #articles article h2 {
+	width: 90%;
+	margin-left: 5%;
+	font-weight: normal;
+	font-size: 1.7em;
+	color: brown;
+}
+
+#wrappers #articles article p {
+	width: 80%;
+	margin-left: 10%;
+	font-family: Comic Sans MS, sans-serif;
+	text-indent: 1em;
+}
+
+#wrappers #articles article a {
+	margin-left: 5%;
+	background: white;
+	color: purple;
+	border-radius: 5px;
+	float: left;
+	padding: 5px;
+	opacity: 0.6;
+}
+
+#wrappers #articles article a:hover {
+	background-color: silver;
+}
+
+/*Центральный блок сайта*/
+
+#main_soc_block {
+	width: 100%;
+	padding: 2% 0%;
+	border-top: 2px solid silver;
+	border-bottom: 2px solid silver;
+	margin: 20px 0px;
+	float: left;
+	background-image: url("../img/collage.jpg");
+	height: 170px;
+	opacity: 0.3;
+}
+
+#main_soc_block_in {
+	text-align: center;
+	padding: 1%;
+	color: black;
+	border: 2px solid silver;
+	border-radius: 7px;
+	width: 500px;
+	height: 90px;
+	background-color: silver;
+}
+
+/*Подвал сайта*/
+
+footer {
+	border-top: 2px solid silver;
+	margin-top: 10px;
+}
+
+footer img {
+	width: 10%; 
+	float: right;
+	margin-right: 10px;
+}
+
+/*Закрепление подвала внизу страницы*/
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {
+	height: 10px;
+}
+
+#page-wrap {
+	min-height: 94%;
+	margin-bottom: -10px;
+}
+
+	/*Дизайн ссылок*/
+
+a {
+	color: orange;
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {
+	color: purple;
+}
+
+/*Стили блока выделения текста*/
+
+::selection {
+	background: silver;
+	color: purple;
+}
+
+::-moz-selection {
+	background: orange;
+	color: silver;
+}
+
+::-webkit-selection {
+	background: orange;
+	color: silver;
+}
+
+::-ms-selection {
+	background: orange;
+	color: silver;
+}
+
