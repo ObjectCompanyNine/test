@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+		function valid(form) {
+			var name = form.name.value,
+				  password = form.password.value,
+					rePassword = form.rePassword.value,
+					state = form.state.value,
+					email = form.email.value,
+					fail = false;
+
+			var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+
+				if (name == "" || name == " "){
+					fail = "Вы не ввели имя" ;
+				}else if (adr_pattern.test(email) == false){
+					fail = "Вы не ввели email" ;
+				}else if (password == ""){
+					fail = "Вы не ввели пароль" ;
+				}else if (password != rePassword){
+					fail = "Пароли не совпадают" ;
+				}else if (state == ""){
+					fail = "Укажите пол" ;
+				} 
+
+				if (fail){
+					alert(fail);
+				}else {
+					window.location = "http://google.com";
+				}
+			// alert(name);
+		}
+	</script>
+</head>
+<body>
+	<div id="win">
+		<form action="" method="post" name="test" id="form">
+			<label for="name">Имя: </label><br>
+			<input type="text" name="name" placeholder="Введите имя" id="name"><br>
+			<label for="email">Email: </label><br>
+			<input type="text" name="email" placeholder="Email" id="email"><br>
+			<label for="password">Пароль: </label><br>
+			<input type="password" name="password" placeholder="Введите пароль" id="password"><br>
+			<label for="rePassword">Проверка пароля: </label><br>
+			<input type="password" name="rePassword" placeholder="Повторите пароль" id="rePassword"><br>
+			<span >Пол</span>
+			<input type="radio" name="state" id="male" value="Мужской"><label for="male">Мужской</label>
+			<input type="radio" name="state" id="female" value="Женский"><label for="female">Женский</label><br>
+			<input type="button" name="submit" value="Готово" onclick="valid(getElementById('form'))">
+		</form>
+	</div>	
+	<!-- <script src="javascript/script.js" type="text/javascript"></script> -->
+</body>
+</html>
